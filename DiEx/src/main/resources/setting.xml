@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--
+	ctrl + shift + / 
+	Exam exam = new LecExam(100, 100, 100);
+ 	-->
+ 
+	<bean id="exam" class="com.spring.diex2.LecExam">
+	<property name="kor" value="100"></property>
+	<property name="eng" value="100"></property>
+	<property name="math" value="100"></property>
+	
+	
+	</bean>
+	
+	<!--  
+	ExamConsole eConsole = new OnelineExamPrint();
+	eConsole.setExam(exam);
+	-->
+	
+	<bean id="eConsoleOne" class="com.spring.diex2.OnelineExamPrint">
+	<property name="exam" ref="exam"></property>
+	</bean>
+	
+	
+	<bean id="eConsoleMulti" class="com.spring.diex2.MultpleLineExamPrint">
+	<property name="exam" ref="exam"></property>
+	</bean>
+	
+	
+</beans>

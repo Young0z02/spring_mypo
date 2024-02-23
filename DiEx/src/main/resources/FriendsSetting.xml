@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean id="FriendsMap" class="com.spring.diex3.FriendsMap">
+   <property name="kakaoMap">
+      <map>
+         <entry>
+            <key><value>무지</value></key>
+            <value>호기심 많은 장난꾸러기 무지</value>
+         </entry>
+         <entry>
+            <key><value>프로도</value></key>
+            <value>부잣집 도시 개 프로도</value>
+         </entry>
+         <entry>
+            <key><value>라이언</value></key>
+            <value>갈기가 없는 수사자</value>
+         </entry>
+      </map>
+   </property>
+</bean>
+  
+</beans>

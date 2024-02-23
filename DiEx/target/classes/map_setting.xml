@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 
+   Map<String, String> addrMap = new HashMap<String, String>();
+   addrMap.put("홍길동1", "홍길동1 주소");
+   addrMap.put("홍길동2", "홍길동2 주소");
+ -->
+    <bean id="collectionMap" class="com.spring.diex2.CollectionMap">
+       <property name="addressMap">
+          <map>
+             <entry>
+                <key><value>홍길동2</value></key>
+                <value>홍길동2 주소</value>
+             </entry>
+          </map>
+       </property>
+    </bean>
+
+
+
+</beans>

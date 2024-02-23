@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!-- Exam exam1 = new LecExam(80, 90, 100); -->
+   <bean id="exam1" class="com.spring.diex2.LecExam"
+      p:kor="80" p:eng="90" p:math="100" />
+   <!-- 
+   ArrayList<Exam> exams = new ArrayList<Exam>();
+      Exam exam1 = new LecExam(80,90,100);
+      exams.add(new LecExam(100,80,90));
+      exams.add(exam1);
+    -->
+ <bean id="exams" class="java.util.ArrayList" >
+    <constructor-arg>
+       <list>
+          <!-- exams.add(new LecExam(100,90,80)); -->
+          <bean class="com.spring.diex2.LecExam"
+             p:kor="80" p:eng="90" p:math="100" />
+          <!--  exams.add(exam1); -->   
+       </list>
+    </constructor-arg>
+ </bean>
+</beans>
